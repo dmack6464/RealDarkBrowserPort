@@ -1,18 +1,70 @@
 /*
 
-Based on RealDark 1.6
+=+=  RealDark Discord port for Browsers =+=
 
-Port release 1
-
-THIS IS ONLY TO BE IMPORTED BY THE CONFIG THEME
-
-If you want to combine the two, you can paste this under the config & import only version.
+Support server: https://discord.gg/7HrZXFq
+Ported version 1.6 
 
 */
-
 :root {
+    
 --version:"RealDarkPort 1.6";
 --description:"RealDark for Chrome/FireFox based browsers";
+
+/* Simplified settings area */
+	--guilds:var(--shade2); /* server list background colour */
+	--sidebars:var(--shade3); /* sidebars background colour */
+	--messages:var(--main); /* messages background colour */
+	--titlebar:var(--shade1a); /* title bar colour */
+	--title:"RealDark"; /* title bar text */
+	--title-align:left; /* Options: center, left */
+	--icon-rounding:0%; /* icon rounding: 0% for none, 50% for completely round icons */
+/* Spotify Premium Element Options */
+	--spotify-premiom-options:flex; /* flex for show, none for hide */
+	--spotify-listening-party-hide-text:""; /* change to "" if unhiding Spotify Premium options. Default is "Listening Party Hidden" */
+
+/* mention settings */
+    --mention:rgba(50,50,120, 0.20); /* mention background colour */
+    --mentionmark:#5555FF; /* mention marker colour */
+    --mentions:var(--accentcolor); /* mention notification colour */
+
+/* divider settings */
+    --cw:200px; /* channel divider width */
+    --mw:180px; /* member divider width */
+    --bw:5px; /* member list and channel list divider height, default 5px */
+    --dc:var(--sidebars); /* menber list and channel list divider colour, default #3070ff */
+
+/* regular settings */
+    --popup:rgba(20,20,25,0.85); /* popup colour changed from rgba(0,0,0,0.85) */
+    --textboxborder:#404040;
+    --shade0:#252529; /* shade colour 0 */
+    --shade1:#1d1d22; /* shade colour 1 */
+    --shade1a:#141418; /* shade colour 1a */
+    --shade2:#0f0f14; /* shade colour 2 */
+    --shade3:#09090D; /* shade colour 3 */
+    --main:#030307;       /*main color rgb(0,0,0) var(--main)*/
+    --text:#DDDDDD;    /*text rgb(255,255,250) var(--text)*/
+    --c:#00ffff;    /*hyperlink rgb(0,255,255) var(--c)*/
+    --accentcolor:#3070ff; /* im actually using this now */
+    --textboxcolour:var(--shade1); /* #090909 text box colour, old was #04040f, old2 was #1d1d2d */
+    --bdtt:rgba(58,113,160,0.85); /* override for BetterDiscord Blue */
+    --font:'Whitney'; /* Default is Whitney */
+
+/* ADVANCED: Add blur to popup menus!
+
+"webPreferences": {
+    	"experimentalFeatures" : true
+    }
+
+Add this to your AppData\Local\Discord\app-0.0.301\resources\app\config.json
+Thanks to 105835945139445760 for the idea and making this possible! */
+	--background-blur:1px; /* Set to 0px for no blurring, default is 1px */
+
+/* other shit */
+    --epc:#707070; /* embed pill colour override, search for pilloverride and uncomment that code to enable */
+    --ch:28px; /* I would like to have channel height at 10px, but discord says fucking nope. set this to 10px if you dont mind rendering issues in the channel list. */
+    --mh:40px; /* same deal as above, I would like this at 25px, but that meaftext-alignns rendering issues, this time in the member list. good fucking job Discord. */
+    background-color: var(--main);
 }
 
 /* port-specific */
